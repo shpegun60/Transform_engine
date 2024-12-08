@@ -8,7 +8,7 @@ public:
     }
 };
 
-struct Double {
+class Double {
     template<typename T>
     constexpr T apply(T value) const {
         return value * 2;
