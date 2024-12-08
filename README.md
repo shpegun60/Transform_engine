@@ -33,10 +33,10 @@ bool result = transform.process(input);
 assert(result && "Process should return true with all flags active");
 
 // Check the result before Break (only Increment)
-assert((transform.get_array() == std::array<int, 5>{{2, 3, 4, 5, 6}}) && "All transformations should be applied");
+assert((transform.get_array() == std::array<int, 5>{{2, 3, 4, 5, 6}}) && "Error");
 
-// Checking results after Break (
+// Checking results after Break ( Double, Square)
 auto finalResults = transform.results();
-assert((finalResults == std::array<int, 5>{{16, 36, 64, 100, 144}}) && "Final results should remain as after all transformations before Break");
+assert((finalResults == std::array<int, 5>{{16, 36, 64, 100, 144}}) && "Error");
 
 ```
