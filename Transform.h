@@ -214,14 +214,14 @@ private:
             std::is_same_v<std::tuple_element_t<Indices, std::tuple<Transforms...>>, Break>...
         };
 
-        // Знайти перший індекс, де isBreak[i] == true
+        // Find the first index where isBreak[i] == true
         for (std::size_t i = 0; i < isBreak.size(); ++i) {
             if (isBreak[i]) {
                 return i;
             }
         }
 
-        // Якщо Break не знайдено
+        // If Break is not found
         return sizeof...(Transforms);
     }
 
