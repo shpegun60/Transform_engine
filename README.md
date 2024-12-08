@@ -25,7 +25,7 @@ public:
 };
 
 // Example of using transformations with flags, all algorithms activated
-Transform<5, int, true, Increment, Double, Square> transform(Increment{}, Double{}, Square{});
+Transform<5, int, true, Increment, Break, Double, Square> transformWithBreak(Increment{}, Break{}, Double{}, Square{});
 std::array<int, 5> input = {1, 2, 3, 4, 5};
 transform.setFlags(0xFFFFFFFF); // All algorithms are activated
 
