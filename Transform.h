@@ -221,7 +221,7 @@ private:
             }
         }
 
-        // Якщо Break не знайдено
+        // break not finded
         return sizeof...(Transforms);
     }
 
