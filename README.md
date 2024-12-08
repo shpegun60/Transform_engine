@@ -9,6 +9,7 @@ public:
 };
 
 class Double {
+public:
     template<typename T>
     constexpr T apply(T value) const {
         return value * 2;
